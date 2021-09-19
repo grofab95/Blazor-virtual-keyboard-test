@@ -1,0 +1,22 @@
+﻿@page "/"
+
+@inject IJSRuntime JS
+
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<input id="text" type="text" placeholder=" Enter something...">
+
+<button @onclick="Test">KLAWA</button>
+
+
+@code
+{
+    async Task Test()
+    {
+        //await JS.InvokeVoidAsync("keyboardPrompt", "What is your name?", "Anonymous");
+        await JS.InvokeVoidAsync("klawa");
+    }
+}
